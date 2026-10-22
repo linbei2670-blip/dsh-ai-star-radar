@@ -1,0 +1,61 @@
+{
+  "name": "dsh-ai-star-radar",
+  "version": "0.2.0",
+  "description": "AI star radar for DeepSeek Harness: measures real 24-hour star growth on GitHub AI projects, tracks newly published repositories, and publishes the result as a sidebar panel plus a model-facing tool",
+  "license": "MIT",
+  "type": "module",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "github",
+    "stars",
+    "trending",
+    "open-source-radar",
+    "panel"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linbei2670-blip/dsh-ai-star-radar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/linbei2670-blip/dsh-ai-star-radar/issues"
+  },
+  "homepage": "https://github.com/linbei2670-blip/dsh-ai-star-radar#readme",
+  "scripts": {
+    "test": "node --test"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}

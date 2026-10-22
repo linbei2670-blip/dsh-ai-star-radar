@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "AI Star Radar",
+    "description": "Scans GitHub for AI open-source projects on a timer and pushes every project over the star threshold into its sidebar panel"
+  }
+}

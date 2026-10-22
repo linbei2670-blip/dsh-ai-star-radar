@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="AI star radar">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#247bbf"/>
+  <circle cx="32" cy="32" r="19" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2"/>
+  <circle cx="32" cy="32" r="11" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2"/>
+  <path d="M32 26.2l2.1 4.6 5 .6-3.7 3.4 1 4.9L32 37.3l-4.4 2.4 1-4.9-3.7-3.4 5-.6L32 26.2z" fill="#ffffff"/>
+  <circle cx="45" cy="19" r="4" fill="#7ae3a8" stroke="#247bbf" stroke-width="1.5"/>
+</svg>

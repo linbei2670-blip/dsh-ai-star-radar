@@ -1,0 +1,29 @@
+# AI Star Radar: tunables live here; the row config survives upgrades.
+#
+# threshold      star count that counts as "hot"                     (default 3000)
+# queries        GitHub search queries, each ANDed with `stars:>=threshold`
+# windowDays     0 = any age; >0 keeps repos pushed within N days
+# recentDays     also track repos CREATED within N days; 0 disables that search  (default 30)
+# recentMinStars minimum stars for one of those new repos                          (default 100)
+# pollMinutes    0 = scan only on demand                                          (default 30)
+# maxItems       how many projects the radar keeps and shows
+# starJump       >0 also flags a project that gained this many stars since the last scan
+# token          optional GitHub token for a higher search rate limit
+# scanOnStart    run one scan ~2s after activation
+- insert:
+    - id: ai-star-radar
+      name: 'dsh-ai-star-radar'
+      config:
+        threshold: 3000
+        queries:
+          - 'topic:ai'
+          - 'topic:llm'
+          - 'topic:agents'
+        windowDays: 0
+        recentDays: 30
+        recentMinStars: 100
+        pollMinutes: 30
+        maxItems: 40
+        starJump: 0
+        token: ''
+        scanOnStart: true
